@@ -1,0 +1,12 @@
+{
+  "name": "code-class-advanced-web-components",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "vite": "^6.2.3",
+    "web-component-base": "^4.1.1"
+  }
+}
