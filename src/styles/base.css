@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+h1 {
+  padding-inline: 1rem;
+}
+
+.timer-wrapper {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+
+.timer {
+  text-align: center;
+  padding: 0.5rem;
+}

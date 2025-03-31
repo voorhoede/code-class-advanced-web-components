@@ -18,6 +18,10 @@ class Menu extends WebComponent {
           list-style-type: "";
           padding: 0;
         }
+
+        a {
+          padding: 0.5rem 1rem;
+        }
       </style>
       <nav>
         <ul>
