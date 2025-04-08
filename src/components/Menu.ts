@@ -2,8 +2,8 @@ import { html, WebComponent } from "web-component-base";
 
 class Menu extends WebComponent {
   static shadowRootInit: ShadowRootInit = {
-    mode: 'open',
-  }
+    mode: "open",
+  };
 
   constructor() {
     super();
@@ -14,13 +14,14 @@ class Menu extends WebComponent {
       <style>
         ul {
           display: flex;
-          gap: 1rem;
           list-style-type: "";
           padding: 0;
+          margin: 0;
         }
 
         a {
-          padding: 0.5rem 1rem;
+          padding: 0.75rem 1.5rem;
+          display: inline-block;
         }
       </style>
       <nav>
@@ -36,8 +37,8 @@ class Menu extends WebComponent {
           </li>
         </ul>
       </nav>
-    `
+    `;
   }
 }
 
-customElements.define('code-class-menu', Menu);
+customElements.define("code-class-menu", Menu);
