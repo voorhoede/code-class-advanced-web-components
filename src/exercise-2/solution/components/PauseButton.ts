@@ -10,11 +10,9 @@ class PauseButton extends HTMLElement {
     this.render();
 
     this.buttonElement = this.shadowRoot.querySelector('button');
-    this.buttonElement.addEventListener('click', this.pauseTimer.bind(this));
-  }
-
-  pauseTimer() {
-    this.dispatchEvent(new CustomEvent('pause', { bubbles: true, composed: true }));
+    this.buttonElement.addEventListener('click', () => {
+      this.dispatchEvent(new CustomEvent('pause', { bubbles: true, composed: true }))
+    });
   }
 
   render() {

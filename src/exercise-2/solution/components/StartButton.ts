@@ -10,11 +10,9 @@ class StartButton extends HTMLElement {
     this.render();
 
     this.buttonElement = this.shadowRoot.querySelector('button');
-    this.buttonElement.addEventListener('click', this.startTimer.bind(this));
-  }
-
-  startTimer() {
-    this.dispatchEvent(new CustomEvent('start', { bubbles: true, composed: true }));
+    this.buttonElement.addEventListener('click', () => {
+      this.dispatchEvent(new CustomEvent('start', { bubbles: true, composed: true }))
+    });
   }
 
   render() {
