@@ -29,15 +29,9 @@ class TimerOneSolution extends HTMLElement {
     this.render();
 
     this.timerElement = this.shadowRoot.querySelector("p.timer");
-    this.startButton = this.shadowRoot.querySelector(
-      'button[data-action="start"]',
-    );
-    this.pauseButton = this.shadowRoot.querySelector(
-      'button[data-action="pause"]',
-    );
-    this.resetButton = this.shadowRoot.querySelector(
-      'button[data-action="reset"]',
-    );
+    this.startButton = this.shadowRoot.querySelector('button[data-action="start"]');
+    this.pauseButton = this.shadowRoot.querySelector('button[data-action="pause"]');
+    this.resetButton = this.shadowRoot.querySelector('button[data-action="reset"]');
 
     this.startButton.addEventListener("click", this.startTimer.bind(this));
     this.pauseButton.addEventListener("click", this.pauseTimer.bind(this));
