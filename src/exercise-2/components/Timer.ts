@@ -1,12 +1,9 @@
-import formatTime from "../utils/format-time";
+import formatTime from "../../utils/format-time";
 
-class TimerOneSolution extends HTMLElement {
+class TimerTwoSolution extends HTMLElement {
   _seconds = 0;
 
   timerElement: HTMLParagraphElement;
-  startButton: HTMLButtonElement;
-  pauseButton: HTMLButtonElement;
-  resetButton: HTMLButtonElement;
 
   interval: number | null = null;
   isRunning = false;
@@ -17,6 +14,7 @@ class TimerOneSolution extends HTMLElement {
 
   set seconds(value: number) {
     this._seconds = value;
+    this.timerElement.textContent = formatTime(value);
   }
 
   constructor() {
@@ -26,6 +24,8 @@ class TimerOneSolution extends HTMLElement {
 
   connectedCallback() {
     this.render();
+
+    this.timerElement = this.shadowRoot.querySelector("p.timer");
   }
 
   startTimer() {
@@ -53,8 +53,13 @@ class TimerOneSolution extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = ``;
+    this.shadowRoot.innerHTML = `
+      <p class="timer">${formatTime(this.seconds)}</p>
+      <code-class-start-button></code-class-start-button>
+      <code-class-pause-button></code-class-pause-button>
+      <code-class-reset-button></code-class-reset-button>
+    `;
   }
 }
 
-customElements.define("code-class-timer", TimerOneSolution);
+customElements.define('code-class-timer', TimerTwoSolution);
