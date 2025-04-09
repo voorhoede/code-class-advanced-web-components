@@ -1,7 +1,7 @@
 import { $timer } from "../store/timer";
 import formatTime from "../../../utils/format-time";
 
-class TimerTwoSolution extends HTMLElement {
+class Timer extends HTMLElement {
   timerElement: HTMLParagraphElement;
   timer = $timer.get();
   interval: number | null = null;
@@ -40,4 +40,4 @@ class TimerTwoSolution extends HTMLElement {
   }
 }
 
-customElements.define('code-class-timer', TimerTwoSolution);
+customElements.define('code-class-timer', Timer);

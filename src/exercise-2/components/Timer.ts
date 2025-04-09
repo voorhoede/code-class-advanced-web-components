@@ -1,6 +1,6 @@
 import formatTime from "../../utils/format-time";
 
-class TimerTwoSolution extends HTMLElement {
+class Timer extends HTMLElement {
   _seconds = 0;
 
   timerElement: HTMLParagraphElement;
@@ -62,4 +62,4 @@ class TimerTwoSolution extends HTMLElement {
   }
 }
 
-customElements.define('code-class-timer', TimerTwoSolution);
+customElements.define('code-class-timer', Timer);
