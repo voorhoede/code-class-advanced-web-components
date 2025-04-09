@@ -1,4 +1,4 @@
-import { resetTimer } from "../store/timer";
+import { $timer } from "../store/timer";
 
 class ResetButton extends HTMLElement {
   buttonElement: HTMLButtonElement;
@@ -12,7 +12,10 @@ class ResetButton extends HTMLElement {
     this.render();
 
     this.buttonElement = this.shadowRoot.querySelector('button');
-    this.buttonElement.addEventListener('click', resetTimer);
+    this.buttonElement.addEventListener('click', () => {
+      $timer.setKey('isRunning', false);
+      $timer.setKey('seconds', 0);
+    });
   }
 
   render() {

@@ -1,4 +1,4 @@
-import { pauseTimer } from "../store/timer";
+import { $timer } from "../store/timer";
 
 class PauseButton extends HTMLElement {
   buttonElement: HTMLButtonElement;
@@ -12,7 +12,9 @@ class PauseButton extends HTMLElement {
     this.render();
 
     this.buttonElement = this.shadowRoot.querySelector('button');
-    this.buttonElement.addEventListener('click', pauseTimer);
+    this.buttonElement.addEventListener('click', () => {
+      $timer.setKey('isRunning', false);
+    });
   }
 
   render() {

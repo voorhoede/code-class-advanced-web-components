@@ -4,6 +4,7 @@ import formatTime from "../../../utils/format-time";
 class TimerTwoSolution extends HTMLElement {
   timerElement: HTMLParagraphElement;
   timer = $timer.get();
+  interval: number | null = null;
 
   constructor() {
     super();
@@ -17,6 +18,15 @@ class TimerTwoSolution extends HTMLElement {
     $timer.subscribe((value) => {
       this.timer = value;
       this.timerElement.textContent = formatTime(value.seconds);
+
+      if (value.isRunning && !this.interval) {
+        this.interval = window.setInterval(() => {
+          $timer.setKey('seconds', $timer.get().seconds + 1);
+        }, 1000);
+      } else if (!value.isRunning && this.interval) {
+        clearInterval(this.interval);
+        this.interval = null;
+      }
     });
   }
 

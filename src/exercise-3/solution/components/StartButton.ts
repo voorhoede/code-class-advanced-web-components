@@ -1,4 +1,4 @@
-import { startTimer } from "../store/timer";
+import { $timer } from "../store/timer";
 
 class StartButton extends HTMLElement {
   buttonElement: HTMLButtonElement;
@@ -12,7 +12,9 @@ class StartButton extends HTMLElement {
     this.render();
 
     this.buttonElement = this.shadowRoot.querySelector('button');
-    this.buttonElement.addEventListener('click', startTimer);
+    this.buttonElement.addEventListener('click', () => {
+      $timer.setKey('isRunning', true);
+    });
   }
 
   render() {
