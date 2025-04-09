@@ -25,10 +25,10 @@ This project uses Vite as a build tool and development server.
 
 Clone this repository and install dependencies:
 ```bash
-git clone https://github.com/username/code-class-web-components-beyond-basics.git
+git clone https://github.com/voorhoede/code-class-web-components-beyond-basics.git
 cd code-class-web-components-beyond-basics
 npm install
-npm start
+npm run dev
 ```
 
 ## 🏗️ Workshop Structure
