@@ -9,7 +9,7 @@
 
 ## 📖 Introduction
 
-This repository contains the code for the Advanced Web Components code class. In this workshop, we'll explore three key aspects of building robust web components: state management, component communication, and state synchronization. Rather than just covering the basics, we'll dive deeper into the challenges you'll face when building reusable, maintainable component systems.
+This repository contains the code for the Web Components: Beyond the Basics workshop. In this workshop, we'll explore three key aspects of building robust web components: state management, component communication, and state synchronization. Rather than just covering the basics, we'll dive deeper into the challenges you'll face when building reusable, maintainable component systems.
 
 We'll use a timer component as our case study, progressively enhancing it through three stages to demonstrate different approaches to component architecture.
 
@@ -25,8 +25,8 @@ This project uses Vite as a build tool and development server.
 
 Clone this repository and install dependencies:
 ```bash
-git clone [repository-url]
-cd advanced-web-components
+git clone https://github.com/username/code-class-web-components-beyond-basics.git
+cd code-class-web-components-beyond-basics
 npm install
 npm start
 ```
@@ -35,17 +35,17 @@ npm start
 
 The workshop is divided into three progressive exercises that explore different patterns for building and connecting web components:
 
-1. **Exercise 1: Web Component Timer**
+1. **[Exercise 1: Web Component Timer](./src/exercise-1/README.md)**
    - Creating a self-contained web component with internal state
    - Implementing DOM element connections and event handling
    - Building the foundation of our timer with proper state updates
 
-2. **Exercise 2: Component Communication with Custom Events**
+2. **[Exercise 2: Component Communication with Custom Events](./src/exercise-2/README.md)**
    - Splitting functionality into multiple specialized components
    - Implementing cross-component communication using custom events
    - Creating a parent-child component structure with event bubbling
 
-3. **Exercise 3: State Management with Nanostores**
+3. **[Exercise 3: State Management with Nanostores](./src/exercise-3/README.md)**
    - Implementing a centralized state management approach
    - Connecting multiple components to a shared store
    - Building reactive components that respond to store updates
