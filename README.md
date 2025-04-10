@@ -35,17 +35,17 @@ npm run dev
 
 The workshop is divided into three progressive exercises that explore different patterns for building and connecting web components:
 
-1. **[Exercise 1: Web Component Timer](./src/exercise-1/)**
+1. **[Exercise 1: Web Component Timer](./src/exercise-1)**
    - Creating a self-contained web component with internal state
    - Implementing DOM element connections and event handling
    - Building the foundation of our timer with proper state updates
 
-2. **[Exercise 2: Component Communication with Custom Events](./src/exercise-2/)**
+2. **[Exercise 2: Component Communication with Custom Events](./src/exercise-2)**
    - Splitting functionality into multiple specialized components
    - Implementing cross-component communication using custom events
    - Creating a parent-child component structure with event bubbling
 
-3. **[Exercise 3: State Management with Nanostores](./src/exercise-3/)**
+3. **[Exercise 3: State Management with Nanostores](./src/exercise-3)**
    - Implementing a centralized state management approach
    - Connecting multiple components to a shared store
    - Building reactive components that respond to store updates
