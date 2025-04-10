@@ -4,7 +4,7 @@
 - Introduction
 - Getting Started
 - Workshop Structure
-- Assignments
+- Important Note
 - Resources
 
 ## 📖 Introduction
